@@ -1,0 +1,74 @@
+From: Guy Alfandary <galfandary@gmail.com>
+Date: Thu, 28 Oct 2021 22:38:58 -0400
+Subject: PuTTY Config
+
+---
+ version.h                | 6 +++---
+ windows/controls.c       | 2 +-
+ windows/dialog.c         | 4 ++--
+ windows/putty-common.rc2 | 2 +-
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/version.h b/version.h
+index a45eef1d..8a4d134f 100644
+--- a/version.h
++++ b/version.h
+@@ -8,6 +8,6 @@
+  * default stuff used for local development runs of 'make'.
+  */
+ 
+-#define TEXTVER "Unidentified build"
+-#define SSHVER "-Unidentified-Local-Build"
+-#define BINARY_VERSION 0,0,0,0
++#define TEXTVER "GT Version"
++#define SSHVER "GT Version"
++#define BINARY_VERSION 0,76,0,0
+diff --git a/windows/controls.c b/windows/controls.c
+index 59129eab..0c94b7a4 100644
+--- a/windows/controls.c
++++ b/windows/controls.c
+@@ -32,7 +32,7 @@
+ #define CHECKBOXHEIGHT 8
+ #define RADIOHEIGHT 8
+ #define EDITHEIGHT 12
+-#define LISTHEIGHT 11
++#define LISTHEIGHT 51
+ #define LISTINCREMENT 8
+ #define COMBOHEIGHT 12
+ #define PUSHBTNHEIGHT 14
+diff --git a/windows/dialog.c b/windows/dialog.c
+index a5af31ed..de70b17f 100644
+--- a/windows/dialog.c
++++ b/windows/dialog.c
+@@ -369,7 +369,7 @@ static void create_controls(HWND hwnd, char *path)
+         /*
+          * Here we must create the basic standard controls.
+          */
+-        ctlposinit(&cp, hwnd, 3, 3, 235);
++	ctlposinit(&cp, hwnd, 3, 3, 275);
+         wc = &ctrls_base;
+         base_id = IDCX_STDBASE;
+     } else {
+@@ -456,7 +456,7 @@ static INT_PTR CALLBACK GenericMainDlgProc(HWND hwnd, UINT msg,
+             r.left = 3;
+             r.right = r.left + 95;
+             r.top = 13;
+-            r.bottom = r.top + 219;
++	    r.bottom = r.top + 254;
+             MapDialogRect(hwnd, &r);
+             treeview = CreateWindowEx(WS_EX_CLIENTEDGE, WC_TREEVIEW, "",
+                                       WS_CHILD | WS_VISIBLE |
+diff --git a/windows/putty-common.rc2 b/windows/putty-common.rc2
+index f8df971f..dc4159d6 100644
+--- a/windows/putty-common.rc2
++++ b/windows/putty-common.rc2
+@@ -26,7 +26,7 @@ BEGIN
+ END
+ 
+ /* Accelerators used: aco */
+-IDD_MAINBOX DIALOG DISCARDABLE 0, 0, 300, 252
++IDD_MAINBOX DIALOG DISCARDABLE 0, 0, 300, 292
+ STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+ CAPTION "PuTTY Configuration"
+ FONT 8, "MS Shell Dlg"
+-- 
