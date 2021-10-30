@@ -1,5 +1,7 @@
 #include "putty.h"
 
+#define DEFAULT_HOME "c:/docs"
+
 static char s_cfg[256][16][64];
 static int n_cfg = 0, i_row = 2, n_col = 0;
 
@@ -7,7 +9,7 @@ static FILE *configFile()
 {
     FILE *fp; char file[256];
     if (!GetEnvironmentVariable("HOME", file, sizeof(file)))
-        strcpy(file, "h:/docs");
+        strcpy(file, DEFAULT_HOME);
     strcat(file, "/.putty"); fp = fopen(file, "r");
     return fp;
 }
