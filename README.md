@@ -20,5 +20,5 @@ Main,exec /bin/bash,120,40,4000,5,host.org,jdoe,jdoe,ssh,22,C:\Users\jdoe\OneDri
 This works on my Win10 and Win11 Home editions but is currently
 crashing on my work Win10 Enterprise edition - investigating.
 
-P.S. (my illustrious contribution to the project thus far):
+P.S. (my illustrious contribution to the project thus far):<br>
 https://git.tartarus.org/?p=simon/putty.git;a=commitdiff;h=24a4340
