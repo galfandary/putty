@@ -3,14 +3,27 @@ Date: Thu, 28 Oct 2021 22:38:58 -0400
 Subject: PuTTY Config
 
 ---
+ cmake/gitcommit.cmake    | 2 +-
  version.h                | 6 +++---
  windows/controls.c       | 2 +-
  windows/dialog.c         | 4 ++--
  windows/putty-common.rc2 | 2 +-
- 4 files changed, 7 insertions(+), 7 deletions(-)
+ 5 files changed, 8 insertions(+), 8 deletions(-)
 
+diff --git a/cmake/gitcommit.cmake b/cmake/gitcommit.cmake
+index 37358208..49fa4b99 100644
+--- a/cmake/gitcommit.cmake
++++ b/cmake/gitcommit.cmake
+@@ -1,6 +1,6 @@
+ # Pure cmake script to write out cmake_commit.h
+ 
+-set(DEFAULT_COMMIT "unavailable")
++set(DEFAULT_COMMIT "215b9d17")
+ set(commit "${DEFAULT_COMMIT}")
+ 
+ set(TOPLEVEL_SOURCE_DIR ${CMAKE_SOURCE_DIR})
 diff --git a/version.h b/version.h
-index a45eef1d..8a4d134f 100644
+index a45eef1d..65c4525d 100644
 --- a/version.h
 +++ b/version.h
 @@ -8,6 +8,6 @@
