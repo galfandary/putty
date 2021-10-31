@@ -1,12 +1,23 @@
 PuTTY Config Patch
 ==================
 
-### Supports Unix style configuration on Windows (.putty) in CSV form:
+### Supports Unix style configuration on Windows (.putty) in CSV form.
+The first line ("Def" below) is the default settings.<br>
+This is a sample use (transposed for display):
 
 <pre>
-Name,RemoteCommand,TermWidth,TermHeight,ScrollbackLines,PingInterval,HostName,UserName,LocalUserName,Protocol,PortNumber,PublicKeyFile,
-Def,exec /bin/bash,120,40,4000,5,!,jdoe,jdoe,ssh,22,C:\Users\jdoe\OneDrive\id.ppk,
-Main,exec /bin/bash,120,40,4000,5,host.org,jdoe,jdoe,ssh,22,C:\Users\jdoe\OneDrive\id.ppk,
+Name,Def,Main
+RemoteCommand,exec /bin/bash,exec /bin/bash
+TermWidth,120,120
+TermHeight,40,40
+ScrollbackLines,4000,4000
+PingInterval,5,5
+HostName,!,host.org
+UserName,jdoe,jdoe
+LocalUserName,jdoe,jdoe
+Protocol,ssh,ssh
+PortNumber,22,22
+PublicKeyFile,C:\Users\jdoe\OneDrive\id.ppk,==
 </pre>
 
 ### Build on Fedora 34:
@@ -18,7 +29,7 @@ Main,exec /bin/bash,120,40,4000,5,host.org,jdoe,jdoe,ssh,22,C:\Users\jdoe\OneDri
 * cmake --build .
 
 This works on my Win10 and Win11 Home editions
-and on my work Win10 Enterprise edition.
+and on my work Win10 Enterprise edition.<br>
 Tested with git hash 215b9d17.
 
 P.S. (my illustrious contribution to the project thus far):<br>
