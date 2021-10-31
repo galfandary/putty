@@ -41,10 +41,13 @@ static void os(const char *sessionname)
     i_row = 1;
 }
 
-static char *es(char *buffer)
+static bool es(strbuf *buffer)
 {
     readConfig();
-    return i_row < n_cfg ? strcpy(buffer, s_cfg[i_row++][0]) : 0;
+    if (i_row >= n_cfg) return false;
+    char c, *s = s_cfg[i_row++][0];
+    while ((c = *s++)) put_byte(buffer, c);
+    return true;
 }
 
 static char *getValue(const char *key)
@@ -89,12 +92,13 @@ void close_settings_r(void *handle) {}
 
 void del_settings(const char *sessionname) {}
 void *enum_settings_start() { i_row = 2; return s_cfg; }
-char *enum_settings_next(void *handle, char *buffer, int buflen) { return es(buffer); }
+bool enum_settings_next(void *handle, strbuf *buffer) { return es(buffer); }
 void enum_settings_finish(void *handle) {}
 int check_stored_host_key(const char *host, int p, const char *type, const char *key) { return 0; }
 bool have_ssh_host_key(const char *hostname, int port, const char *keytype) { return 0; }
 void store_host_key(const char *hostname, int port, const char *keytype, const char *key) {}
-void read_random_seed(void *consumer) {}
+typedef void (*noise_consumer_t) (void *data, int len);
+void read_random_seed(noise_consumer_t consumer) {}
 void write_random_seed(void *data, int len) {}
 void cleanup_all() {}
 
