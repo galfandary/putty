@@ -30,7 +30,7 @@ PublicKeyFile,C:\Users\jdoe\OneDrive\id.ppk,==
 
 This works on my Win10 and Win11 Home editions
 and on my work Win10 Enterprise edition.<br>
-Tested with git hash 4e93a2c1.
+Tested with git hash 42120dd1.
 
 P.S. (my illustrious contribution to the project thus far):<br>
 https://git.tartarus.org/?p=simon/putty.git;a=commitdiff;h=24a4340
