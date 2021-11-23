@@ -24,13 +24,13 @@ PublicKeyFile,C:\Users\jdoe\OneDrive\id.ppk,==
 
 * dnf install cmake mingw64-filesystem mingw64-gcc
 * cp /path/storage.c windows/
-* git am /path/storage.dif
+* git am /path/patch.dif
 * mingw64-cmake .
 * cmake --build .
 
 This works on my Win10 and Win11 Home editions
 and on my work Win10 Enterprise edition.<br>
-Tested with git hash 42120dd1.
+Tested with git hash 67b11add.
 
 P.S. (my illustrious contribution to the project thus far):<br>
 https://git.tartarus.org/?p=simon/putty.git;a=commitdiff;h=24a4340

@@ -11,14 +11,14 @@ Subject: PuTTY Config
  5 files changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/cmake/gitcommit.cmake b/cmake/gitcommit.cmake
-index 37358208..53f84569 100644
+index 37358208..33e0b3c0 100644
 --- a/cmake/gitcommit.cmake
 +++ b/cmake/gitcommit.cmake
 @@ -1,6 +1,6 @@
  # Pure cmake script to write out cmake_commit.h
  
 -set(DEFAULT_COMMIT "unavailable")
-+set(DEFAULT_COMMIT "42120dd1")
++set(DEFAULT_COMMIT "67b11add")
  set(commit "${DEFAULT_COMMIT}")
  
  set(TOPLEVEL_SOURCE_DIR ${CMAKE_SOURCE_DIR})
