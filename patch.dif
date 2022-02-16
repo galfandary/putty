@@ -11,14 +11,14 @@ Subject: PuTTY Config
  5 files changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/cmake/gitcommit.cmake b/cmake/gitcommit.cmake
-index 37358208..877be337 100644
+index adb644bc..8e0e3fcf 100644
 --- a/cmake/gitcommit.cmake
 +++ b/cmake/gitcommit.cmake
 @@ -1,6 +1,6 @@
- # Pure cmake script to write out cmake_commit.h
+ # Pure cmake script to write out cmake_commit.c and cmake_version.but
  
 -set(DEFAULT_COMMIT "unavailable")
-+set(DEFAULT_COMMIT "fafad1b8")
++set(DEFAULT_COMMIT "aa015304")
  set(commit "${DEFAULT_COMMIT}")
  
  set(TOPLEVEL_SOURCE_DIR ${CMAKE_SOURCE_DIR})
@@ -37,7 +37,7 @@ index a45eef1d..65c4525d 100644
 +#define SSHVER "GT Version"
 +#define BINARY_VERSION 0,76,0,0
 diff --git a/windows/controls.c b/windows/controls.c
-index 59129eab..0c94b7a4 100644
+index 3c7896a4..46f15b86 100644
 --- a/windows/controls.c
 +++ b/windows/controls.c
 @@ -32,7 +32,7 @@
@@ -50,7 +50,7 @@ index 59129eab..0c94b7a4 100644
  #define COMBOHEIGHT 12
  #define PUSHBTNHEIGHT 14
 diff --git a/windows/dialog.c b/windows/dialog.c
-index 66f26128..778c8edb 100644
+index 31bf19e6..825b585c 100644
 --- a/windows/dialog.c
 +++ b/windows/dialog.c
 @@ -369,7 +369,7 @@ static void create_controls(HWND hwnd, char *path)
