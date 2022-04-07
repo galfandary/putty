@@ -11,14 +11,14 @@ Subject: PuTTY Config
  5 files changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/cmake/gitcommit.cmake b/cmake/gitcommit.cmake
-index adb644bc..2739365c 100644
+index adb644bc..37a9a884 100644
 --- a/cmake/gitcommit.cmake
 +++ b/cmake/gitcommit.cmake
 @@ -1,6 +1,6 @@
  # Pure cmake script to write out cmake_commit.c and cmake_version.but
  
 -set(DEFAULT_COMMIT "unavailable")
-+set(DEFAULT_COMMIT "a101444d")
++set(DEFAULT_COMMIT "c0fba758")
  set(commit "${DEFAULT_COMMIT}")
  
  set(TOPLEVEL_SOURCE_DIR ${CMAKE_SOURCE_DIR})
@@ -50,7 +50,7 @@ index 3c7896a4..46f15b86 100644
  #define COMBOHEIGHT 12
  #define PUSHBTNHEIGHT 14
 diff --git a/windows/dialog.c b/windows/dialog.c
-index 31bf19e6..825b585c 100644
+index 38af0f9b..7737f377 100644
 --- a/windows/dialog.c
 +++ b/windows/dialog.c
 @@ -369,7 +369,7 @@ static void create_controls(HWND hwnd, char *path)
@@ -62,7 +62,7 @@ index 31bf19e6..825b585c 100644
          wc = &ctrls_base;
          base_id = IDCX_STDBASE;
      } else {
-@@ -456,7 +456,7 @@ static INT_PTR CALLBACK GenericMainDlgProc(HWND hwnd, UINT msg,
+@@ -459,7 +459,7 @@ static INT_PTR CALLBACK GenericMainDlgProc(HWND hwnd, UINT msg,
              r.left = 3;
              r.right = r.left + 95;
              r.top = 13;
