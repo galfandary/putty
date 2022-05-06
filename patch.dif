@@ -11,14 +11,14 @@ Subject: PuTTY Config
  5 files changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/cmake/gitcommit.cmake b/cmake/gitcommit.cmake
-index adb644bc..f0e1acb1 100644
+index adb644bc..fdc88a9a 100644
 --- a/cmake/gitcommit.cmake
 +++ b/cmake/gitcommit.cmake
 @@ -1,6 +1,6 @@
  # Pure cmake script to write out cmake_commit.c and cmake_version.but
  
 -set(DEFAULT_COMMIT "unavailable")
-+set(DEFAULT_COMMIT "6143a50e")
++set(DEFAULT_COMMIT "5ca78237")
  set(commit "${DEFAULT_COMMIT}")
  
  set(TOPLEVEL_SOURCE_DIR ${CMAKE_SOURCE_DIR})
@@ -37,7 +37,7 @@ index a45eef1d..65c4525d 100644
 +#define SSHVER "GT Version"
 +#define BINARY_VERSION 0,76,0,0
 diff --git a/windows/controls.c b/windows/controls.c
-index 3c7896a4..46f15b86 100644
+index d0de4674..78ca715c 100644
 --- a/windows/controls.c
 +++ b/windows/controls.c
 @@ -32,7 +32,7 @@
@@ -50,29 +50,29 @@ index 3c7896a4..46f15b86 100644
  #define COMBOHEIGHT 12
  #define PUSHBTNHEIGHT 14
 diff --git a/windows/dialog.c b/windows/dialog.c
-index 38af0f9b..7737f377 100644
+index 774214db..3de00967 100644
 --- a/windows/dialog.c
 +++ b/windows/dialog.c
-@@ -369,7 +369,7 @@ static void create_controls(HWND hwnd, char *path)
-         /*
-          * Here we must create the basic standard controls.
-          */
--        ctlposinit(&cp, hwnd, 3, 3, 235);
-+	ctlposinit(&cp, hwnd, 3, 3, 275);
-         wc = &ctrls_base;
-         base_id = IDCX_STDBASE;
-     } else {
-@@ -459,7 +459,7 @@ static INT_PTR CALLBACK GenericMainDlgProc(HWND hwnd, UINT msg,
+@@ -498,7 +498,7 @@ static INT_PTR GenericMainDlgProc(HWND hwnd, UINT msg, WPARAM wParam,
+       case WM_INITDIALOG:
+         pds_initdialog_start(pds, hwnd);
+ 
+-        pds_create_controls(pds, TREE_BASE, IDCX_STDBASE, 3, 3, 235, "");
++        pds_create_controls(pds, TREE_BASE, IDCX_STDBASE, 3, 3, 275, "");
+ 
+         SendMessage(hwnd, WM_SETICON, (WPARAM) ICON_BIG,
+                     (LPARAM) LoadIcon(hinst, MAKEINTRESOURCE(IDI_CFGICON)));
+@@ -530,7 +530,7 @@ static INT_PTR GenericMainDlgProc(HWND hwnd, UINT msg, WPARAM wParam,
              r.left = 3;
              r.right = r.left + 95;
              r.top = 13;
 -            r.bottom = r.top + 219;
-+	    r.bottom = r.top + 254;
++            r.bottom = r.top + 254;
              MapDialogRect(hwnd, &r);
              treeview = CreateWindowEx(WS_EX_CLIENTEDGE, WC_TREEVIEW, "",
                                        WS_CHILD | WS_VISIBLE |
 diff --git a/windows/putty-common.rc2 b/windows/putty-common.rc2
-index f8df971f..dc4159d6 100644
+index be5202aa..fb1391f8 100644
 --- a/windows/putty-common.rc2
 +++ b/windows/putty-common.rc2
 @@ -26,7 +26,7 @@ BEGIN

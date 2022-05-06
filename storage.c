@@ -105,3 +105,14 @@ void cleanup_all() {}
 int add_to_jumplist_registry(const char *item) { return 0; }
 int remove_from_jumplist_registry(const char *item) { return 0; }
 char *get_jumplist_registry_entries() { char *l = snewn(2, char); l[0] = l[1] = 0; return l; }
+
+struct host_ca_enum *enum_host_ca_start() { return 0; }
+bool enum_host_ca_next(struct host_ca_enum *handle, strbuf *out) { return false; }
+void enum_host_ca_finish(struct host_ca_enum *handle) {}
+
+struct host_ca *host_ca_load(const char *name) { return 0; }
+char *host_ca_save(struct host_ca *handle) { return 0; }
+char *host_ca_delete(const char *name) { return 0; }
+
+struct host_ca *host_ca_new() { return 0; }
+void host_ca_free(host_ca *handle) {}
